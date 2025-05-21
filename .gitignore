@@ -29,12 +29,3 @@ dist-ssr
 .env.local
 .env.*                      # any other env variants
 !.env.example               # except the example template
-
-# Coverage directory
-coverage/
-
-# System files
-Thumbs.db
-
-# Editor swap & backup files
-*~
