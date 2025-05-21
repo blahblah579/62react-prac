@@ -25,7 +25,4 @@ dist-ssr
 *.sw?
 
 # Environment variables
-.env                        # local env files
 .env.local
-.env.*                      # any other env variants
-!.env.example               # except the example template
