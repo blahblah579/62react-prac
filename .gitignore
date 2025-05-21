@@ -30,14 +30,10 @@ dist-ssr
 .env.*                      # any other env variants
 !.env.example               # except the example template
 
-# Firebase client config (keep secrets out of Git)
-src/firebase.js
-
 # Coverage directory
 coverage/
 
 # System files
-.DS_Store
 Thumbs.db
 
 # Editor swap & backup files
