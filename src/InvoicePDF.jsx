@@ -8,17 +8,17 @@ import {
   StyleSheet,
   Font,
 } from "@react-pdf/renderer"; // React-PDF core primitives :contentReference[oaicite:1]{index=1}
-
+const basePath = import.meta.env.BASE_URL || "/";
 // 1️⃣ Register Roboto (normal + bold)
 Font.register({
   family: "Roboto",
   fonts: [
     {
-      src: "/fonts/Roboto-Regular.ttf", // served from public/fonts
+      src: `${basePath}fonts/Roboto-Regular.ttf`,
       fontWeight: "normal",
     },
     {
-      src: "/fonts/Roboto-Bold.ttf",
+      src: `${basePath}fonts/Roboto-Regular.ttf`,
       fontWeight: "bold",
     },
   ],
