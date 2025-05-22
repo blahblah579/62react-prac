@@ -1,21 +1,31 @@
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies & build output
+node_modules/
+dist/
+dist-ssr/
+
+# Environment files
+# (This will ignore any *.local files, including .env.local and .env.development.local)
 *.local
 
+# If you ever use other env files you don’t want checked in, you can also add:
+# .env
+# .env.*.local
+
+# Firebase local emulator & cache
+.firebase/
+
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+.vscode/
+!.vscode/extensions.json   # keep your workspace recommendations
+.idea/
 .DS_Store
 *.suo
 *.ntvs*

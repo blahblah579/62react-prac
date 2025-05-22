@@ -7,7 +7,7 @@ import { useAuth } from "./contexts/AuthContext";
 const LeftBar = ({ user, setUser }) => {
   const { currentUser, logout } = useAuth();
 
-  const userInitials = currentUser.email[0].toUpperCase();
+  const userInitials = currentUser?.email[0].toUpperCase();
 
   // 1. Initialize theme from localStorage or OS preference
   const getInitialTheme = () => {
