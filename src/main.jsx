@@ -162,7 +162,7 @@ function App() {
   return (
     <StrictMode>
       <AuthProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/62react-prac">
           <Routes>
             {/** A) PUBLIC: only when user===null */}
             <Route element={<NoAuthRoute user={user} />}>
