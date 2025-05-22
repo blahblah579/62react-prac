@@ -3,7 +3,7 @@ import "./home.css";
 import Icon from "@mdi/react";
 import "cally";
 
-import { useAuth } from "./contexts/AuthContext";
+// import { useAuth } from "./contexts/AuthContext";
 import { NavLink, useNavigate, Outlet } from "react-router-dom";
 import { useUserInvoices } from "./customHooks/useUserInvoices"; // Real-time hook for user invoices
 
@@ -23,7 +23,7 @@ import { v4 as uuidv4 } from "uuid";
 const HomePage = ({}) => {
   // 1. Destructure out the real-time list and CRUD functions from our hook
   const { invoices, loading, addInvoice } = useUserInvoices();
-  const { currentUser, logout } = useAuth();
+  // const { currentUser, logout } = useAuth();
   // 2. React Router navigation for detail views
   const navigate = useNavigate();
 

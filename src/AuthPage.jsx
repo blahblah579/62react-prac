@@ -42,7 +42,7 @@ export default function AuthPage({ setUser }) {
       const credential = isLogin
         ? await login(email, pw)
         : await signup(email, pw);
-      setUser(credential.user?.email);
+      setUser(credential.user.email);
       navigate("/userHomePage", { replace: true });
     } catch (err) {
       // map to friendly message
