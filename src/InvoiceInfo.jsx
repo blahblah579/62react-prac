@@ -1047,7 +1047,7 @@ const InvoiceInfo = ({ invoices, setInvoices }) => {
         invoice.id === id ? { ...invoice, status: "paid" } : { ...invoice }
       )
     );
-    setCurrentInvoice((prevInvoice) => ({ ...prevInvoice, status: "paid" }));
+    // setCurrentInvoice((prevInvoice) => ({ ...prevInvoice, status: "paid" }));
   };
 
   const goBack = useRef();
