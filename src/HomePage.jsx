@@ -1646,7 +1646,7 @@ const HomePage = ({ initialInvoices, invoices, setInvoices }) => {
               >
                 <div className="flex my-8 px-6 justify-between items-center">
                   <div className="complex flex flex-col md:flex-rows items-center justify-center">
-                    <div className="id font-bold text-sm dark:text-white">
+                    <div className="id font-bold text-sm text-black dark:text-white">
                       <span className="text-[#8688c3] dark:text-[#7b81bf] text-sm font-bold">
                         #
                       </span>
