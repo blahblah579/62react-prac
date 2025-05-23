@@ -5,8 +5,10 @@ import { useNavigate } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiEye, mdiEyeOff } from "@mdi/js";
 import "./home.css";
+import { setLogLevel } from "firebase/app";
 
 export default function AuthPage({ setUser }) {
+  setLogLevel("silent");
   const { signup, login } = useAuth();
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
@@ -29,7 +31,7 @@ export default function AuthPage({ setUser }) {
         return "The email is already registered";
       }
       // optionally handle weak-password, invalid-email, etc.
-      return "Failed to create account. Enter a valid email and a 6 letter password.";
+      return "Failed to create account. Enter a valid email and at least 6 letter password.";
     }
   }
 
