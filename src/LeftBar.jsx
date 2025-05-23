@@ -143,7 +143,7 @@ const LeftBar = ({ user, setUser }) => {
             <div
               onClick={() => handleLogout()}
               tabIndex={0}
-              className="dropdown-content menu bg-[#7c5dfa] text-white dark:text-black dark:bg-base-100 rounded-box z-1 w-22 p-2 shadow-sm text-center cursor-pointer hover:text-blue-200 hover:underline
+              className="dropdown-content menu bg-[#7c5dfa] text-white dark:text-black dark:bg-white rounded-box z-1 w-22 p-2 shadow-sm text-center cursor-pointer hover:text-blue-200 hover:underline
               dark:hover:text-[#7c5dfa]"
             >
               Log Out
