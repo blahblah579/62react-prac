@@ -570,7 +570,7 @@ const InvoiceInfo = ({ invoices, setInvoices }) => {
   const billToPostCode = useRef("");
   const billToCountry = useRef("India");
   const date = useRef("");
-  const [invoiceDate, setInvoiceDate] = useState(currentInvoice.invoiceDate);
+  const [invoiceDate, setInvoiceDate] = useState("");
   const paymentTerms = useRef(null);
 
   // Button Ref
@@ -638,18 +638,14 @@ const InvoiceInfo = ({ invoices, setInvoices }) => {
     return diffDays.toString();
   }
 
-  const [defaultDate, setDefaultDate] = useState(
-    toISODate(currentInvoice.invoiceDate)
-  );
+  const [defaultDate, setDefaultDate] = useState("");
 
   const projectDesc = useRef("");
   const currency = useRef(null);
-  const [currencySymbol, setCurrencySymbol] = useState(
-    currentInvoice.currencySymbol
-  );
+  const [currencySymbol, setCurrencySymbol] = useState("");
 
   // ITEM LIST in the SIDEBAR
-  const [itemList, setItemList] = useState(currentInvoice.itemList);
+  const [itemList, setItemList] = useState([]);
 
   const addNewListItem = () => {
     //add new item to itemList of above type ,generate new id
@@ -1063,6 +1059,28 @@ const InvoiceInfo = ({ invoices, setInvoices }) => {
     // setCurrentInvoice(null);
     // goBack.current.click();
   };
+
+  useEffect(() => {
+    if (!currentInvoice) return;
+    setInvoiceDate(currentInvoice.invoiceDate);
+    setDefaultDate(toISODate(currentInvoice.invoiceDate));
+    setCurrencySymbol(currentInvoice.currencySymbol);
+    setItemList(currentInvoice.itemList);
+  }, [currentInvoice]);
+
+  if (
+    invoices.length === 0 ||
+    currentInvoice === null ||
+    currentInvoice === undefined
+  ) {
+    return (
+      <div className="pt-20 mx-5 md:mx-20 lg:ml-65 lg:mr-40 xl:ml-67 xl:mr-42">
+        <div className="my-8 md:my-4 card rounded-xl w-full bg-white dark:bg-[#1e2139] card-xs shadow-sm h-30 skeleton"></div>
+        <div className="my-8 md:my-4 card rounded-xl w-full bg-white dark:bg-[#1e2139] card-xs shadow-sm h-30 skeleton"></div>
+        <div className="my-8 md:my-4 card rounded-xl w-full bg-white dark:bg-[#1e2139] card-xs shadow-sm h-30 skeleton"></div>
+      </div>
+    );
+  }
 
   // MAIN
   return (

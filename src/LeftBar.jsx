@@ -61,9 +61,9 @@ const LeftBar = ({ user, setUser }) => {
   const handleLogout = () => {
     setUser(null);
     logout;
-    // navigate("/", { replace: true });
+    navigate("/", { replace: true });
     // 1) Replace current history entry with "/"
-    window.location.replace("/");
+    // window.location.replace("/");
   };
 
   return (
